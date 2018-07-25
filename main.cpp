@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Libs/Listas.h"
+#include "Libs/Grafo.h"
 
 int main(){
 
-	printf("TESTE!\n");
-
+	char nome_arq[] = "entrada.txt";
+	Grafo *grafo = new Grafo(nome_arq);
+	grafo->topologia();
+	
+	delete grafo;
 	return 0;
 }
 
