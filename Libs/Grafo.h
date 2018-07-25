@@ -63,12 +63,12 @@ void Grafo::topologia(){
 	printf("Quantidade de Aresta: %d\n", this->quant_arestas);
 	printf("No Inicial: %d\n", this->id_inicio);
 	printf("No Final: %d\n", this->id_final);
-	printf("Hora Atual: %d:%d\n\n", (int)this->hora/100, this->hora%100);
+	printf("Horario de Saida: %d:%d\n\n", (int)this->hora/100, this->hora%100);
 	
 	printf("Janelas de tempo:\n");
 	No_lista_no *temp = lista_no->get_raiz();
 	while(temp != NULL){
-		printf("\t%2d\t%2d:%2d\t%2d:%2d\n", temp->identificador, temp->chegada[0], temp->chegada[1], temp->saida[0], temp->saida[1]);
+		printf("\t%2d\t%02d:%02d\t%02d:%02d\n", temp->identificador, temp->chegada[0], temp->chegada[1], temp->saida[0], temp->saida[1]);
 		temp = temp->proximo;
 	}
 	
@@ -78,7 +78,7 @@ void Grafo::topologia(){
 	while(temp != NULL){
 		temp2 = temp->lista_aresta->get_raiz();
 		while(temp2 != NULL){
-			printf("\t(%2d, %2d )\t%2d\n", temp->identificador, temp2->destino, temp2->peso);
+			printf("\t( %02d, %02d )\t%02d\n", temp->identificador, temp2->destino, temp2->peso);
 			temp2 = temp2->proximo;
 		}
 		temp = temp->proximo;

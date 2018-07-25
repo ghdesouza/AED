@@ -3,6 +3,7 @@ LIBS = -lm
 CC = g++
 CFLAGS = -g -Wall
 RM = rm -f
+DIR = Libs
 
 all: $(TARGET)
 

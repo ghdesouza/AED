@@ -16,7 +16,8 @@ class Lista_aresta{
 };
 
 struct No_lista_no{
-	int identificador, predecessor, distacia, avaliado;
+	int identificador, predecessor, distancia;
+	bool avaliado;
 	int chegada[2], saida[2];
 	No_lista_no *anterior;
 	No_lista_no *proximo;
@@ -65,22 +66,34 @@ void Lista_no::Add_no(int ident, int cheg, int said){
 	novo_no->lista_aresta = new Lista_aresta();
 	novo_no->identificador = ident;
 	novo_no->predecessor = 0;
-	novo_no->distacia = 0;
+	novo_no->distancia = 0;
 	novo_no->avaliado = 0;
 	novo_no->chegada[0] = (int)cheg/100;
 	novo_no->chegada[1] = cheg%100;
 	novo_no->saida[0] = (int)said/100;
 	novo_no->saida[1] = said%100;
 	
-	novo_no->anterior = NULL;
-	if( this->raiz == NULL ) novo_no->proximo = NULL;
-	else{
-		this->raiz->anterior = novo_no;
-		novo_no->proximo = this->raiz;
-	}
-	this->raiz = novo_no;
+	// novo_no->anterior = NULL;
+	// if( this->raiz == NULL ) novo_no->proximo = NULL;
+	// else{
+	// 	this->raiz->anterior = novo_no;
+	// 	novo_no->proximo = this->raiz;
+	// }
+	// this->raiz = novo_no;
 
-	return;
+
+	if( this->raiz == NULL ) this->raiz = novo_no;
+	else{
+		No_lista_no *no_aux = this->raiz;
+		
+		while(no_aux->proximo != NULL){
+			no_aux = no_aux->proximo;
+		}
+
+		no_aux->proximo = novo_no;
+		novo_no->anterior = no_aux;
+		novo_no->proximo = NULL;
+	}
 }
 
 struct No_lista_aresta{
