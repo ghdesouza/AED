@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caminho Minimo com Janela de Tempo: Referência à classe Grafo</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Caminho Minimo com Janela de Tempo
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho referente a disciplina de Algoritmos e Estrutura de dados. Esse programa tem como finalidade encontrar o caminho mínimo entre 2 nós de um grafo respeitando a tabela de tempo de cada um dos nós.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a> &#124;
+<a href="classGrafo-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à classe Grafo</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Grafo_8h_source.html">Grafo.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:a1d83cea259805a3f0998cb97e931272a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrafo.html#a1d83cea259805a3f0998cb97e931272a">Grafo</a> (char nome_arquivo[], char tipo_grafo)</td></tr>
+<tr class="memdesc:a1d83cea259805a3f0998cb97e931272a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor.  <a href="#a1d83cea259805a3f0998cb97e931272a">Mais...</a><br /></td></tr>
+<tr class="separator:a1d83cea259805a3f0998cb97e931272a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrafo.html#a16f3fbba0de2667dfba3b657cb7e95ff">~Grafo</a> ()</td></tr>
+<tr class="memdesc:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor Desaloca a memoria dinamica alocada para a criacao do <a class="el" href="classGrafo.html">Grafo</a>.  <a href="#a16f3fbba0de2667dfba3b657cb7e95ff">Mais...</a><br /></td></tr>
+<tr class="separator:a16f3fbba0de2667dfba3b657cb7e95ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dbee100adf2a4d82556f177d3275bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrafo.html#a2dbee100adf2a4d82556f177d3275bc4">topologia</a> ()</td></tr>
+<tr class="memdesc:a2dbee100adf2a4d82556f177d3275bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Topologia Informa as informacoes referentes a topologia do <a class="el" href="classGrafo.html">Grafo</a>: Quantidade de Nos, Arestas, Pesos das arestas e janelas de tempo dos Nós.  <a href="#a2dbee100adf2a4d82556f177d3275bc4">Mais...</a><br /></td></tr>
+<tr class="separator:a2dbee100adf2a4d82556f177d3275bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac094ede52756d0ce2ae919aab66461ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGrafo.html#ac094ede52756d0ce2ae919aab66461ae">menor_caminho</a> ()</td></tr>
+<tr class="memdesc:ac094ede52756d0ce2ae919aab66461ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menor Caminho Encontra o menor caminho entre o No de Origem e o No de Destino usando o algoritmo de Dijkstra considerando as janelas de tempo.  <a href="#ac094ede52756d0ce2ae919aab66461ae">Mais...</a><br /></td></tr>
+<tr class="separator:ac094ede52756d0ce2ae919aab66461ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock">
+<p class="definition">Definido na linha <a class="el" href="Grafo_8h_source.html#l00013">13</a> do ficheiro <a class="el" href="Grafo_8h_source.html">Grafo.h</a>.</p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="a1d83cea259805a3f0998cb97e931272a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d83cea259805a3f0998cb97e931272a">&#9670;&nbsp;</a></span>Grafo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Grafo::Grafo </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>nome_arquivo</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>tipo_grafo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nome_arquivo</td><td>- Nome do arquivo que possui a topologia do <a class="el" href="classGrafo.html">Grafo</a>. </td></tr>
+    <tr><td class="paramname">tipo_grafo</td><td>- Define se o grafo é direcionado ou não Constroi o <a class="el" href="classGrafo.html">Grafo</a> de acordo com as informações do arquivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Sem Retorno </dd></dl>
+
+</div>
+</div>
+<a id="a16f3fbba0de2667dfba3b657cb7e95ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f3fbba0de2667dfba3b657cb7e95ff">&#9670;&nbsp;</a></span>~Grafo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Grafo::~Grafo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor Desaloca a memoria dinamica alocada para a criacao do <a class="el" href="classGrafo.html">Grafo</a>. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Sem Retorno </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="ac094ede52756d0ce2ae919aab66461ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac094ede52756d0ce2ae919aab66461ae">&#9670;&nbsp;</a></span>menor_caminho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::menor_caminho </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Menor Caminho Encontra o menor caminho entre o No de Origem e o No de Destino usando o algoritmo de Dijkstra considerando as janelas de tempo. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Void </dd></dl>
+
+</div>
+</div>
+<a id="a2dbee100adf2a4d82556f177d3275bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dbee100adf2a4d82556f177d3275bc4">&#9670;&nbsp;</a></span>topologia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grafo::topologia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Topologia Informa as informacoes referentes a topologia do <a class="el" href="classGrafo.html">Grafo</a>: Quantidade de Nos, Arestas, Pesos das arestas e janelas de tempo dos Nós. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Void </dd></dl>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte ficheiro:<ul>
+<li>Include/<a class="el" href="Grafo_8h_source.html">Grafo.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

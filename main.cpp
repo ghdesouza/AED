@@ -1,11 +1,7 @@
 /*
 GABRIEL BRANDAO DE MIRANDA 102190180
-GABRIEL HENRIQUE DE SOUZA 102190179
+GABRIEL HENRIQUE DE SOUZA 102190173
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
 
 #include "Include/Grafo.h"
 
@@ -25,3 +21,4 @@ int main(int argc, char* argv[]){
 	delete grafo;
 	return 0;
 }
+

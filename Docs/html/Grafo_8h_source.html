@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Caminho Minimo com Janela de Tempo: Código-Fonte de Include/Grafo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Caminho Minimo com Janela de Tempo
+   &#160;<span id="projectnumber">V1.0</span>
+   </div>
+   <div id="projectbrief">Trabalho referente a disciplina de Algoritmos e Estrutura de dados. Esse programa tem como finalidade encontrar o caminho mínimo entre 2 nós de um grafo respeitando a tabela de tempo de cada um dos nós.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_856524284ebe840938865dc061f982fb.html">Include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Grafo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Grafo_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Listas_8h.html">Listas.h</a>&quot;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef GRAFO_H_INCLUDED</span></div><div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="Grafo_8h.html#aed12cdb280c0cc3686e789710d99821e">    4</a></span>&#160;<span class="preprocessor">#define GRAFO_H_INCLUDED</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="classGrafo.html">Grafo</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classGrafo.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGrafo.html">Grafo</a>{</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> hora; </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> quant_nos; </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> quant_arestas; </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="classLista__no.html">Lista_no</a>* lista_no; </div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> id_inicio; </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> id_final; </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> soma_com_janela(<a class="code" href="structNo__lista__no.html">No_lista_no</a> *inicial, <a class="code" href="structNo__lista__no.html">No_lista_no</a> *fim, <span class="keywordtype">int</span> peso);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> broadcast_distancia(<a class="code" href="structNo__lista__no.html">No_lista_no</a> *no);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classGrafo.html#a1d83cea259805a3f0998cb97e931272a">Grafo</a>(<span class="keywordtype">char</span> nome_arquivo[], <span class="keywordtype">char</span> tipo_grafo);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classGrafo.html#a16f3fbba0de2667dfba3b657cb7e95ff">~Grafo</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGrafo.html#a2dbee100adf2a4d82556f177d3275bc4">topologia</a>();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGrafo.html#ac094ede52756d0ce2ae919aab66461ae">menor_caminho</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // GRAFO_H_INCLUDED</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="ttc" id="classGrafo_html_a1d83cea259805a3f0998cb97e931272a"><div class="ttname"><a href="classGrafo.html#a1d83cea259805a3f0998cb97e931272a">Grafo::Grafo</a></div><div class="ttdeci">Grafo(char nome_arquivo[], char tipo_grafo)</div><div class="ttdoc">Construtor. </div></div>
+<div class="ttc" id="classGrafo_html_a16f3fbba0de2667dfba3b657cb7e95ff"><div class="ttname"><a href="classGrafo.html#a16f3fbba0de2667dfba3b657cb7e95ff">Grafo::~Grafo</a></div><div class="ttdeci">~Grafo()</div><div class="ttdoc">Destrutor Desaloca a memoria dinamica alocada para a criacao do Grafo. </div></div>
+<div class="ttc" id="Listas_8h_html"><div class="ttname"><a href="Listas_8h.html">Listas.h</a></div></div>
+<div class="ttc" id="classLista__no_html"><div class="ttname"><a href="classLista__no.html">Lista_no</a></div><div class="ttdef"><b>Definition:</b> <a href="Listas_8h_source.html#l00052">Listas.h:52</a></div></div>
+<div class="ttc" id="classGrafo_html_ac094ede52756d0ce2ae919aab66461ae"><div class="ttname"><a href="classGrafo.html#ac094ede52756d0ce2ae919aab66461ae">Grafo::menor_caminho</a></div><div class="ttdeci">void menor_caminho()</div><div class="ttdoc">Menor Caminho Encontra o menor caminho entre o No de Origem e o No de Destino usando o algoritmo de D...</div></div>
+<div class="ttc" id="classGrafo_html"><div class="ttname"><a href="classGrafo.html">Grafo</a></div><div class="ttdef"><b>Definition:</b> <a href="Grafo_8h_source.html#l00013">Grafo.h:13</a></div></div>
+<div class="ttc" id="structNo__lista__no_html"><div class="ttname"><a href="structNo__lista__no.html">No_lista_no</a></div><div class="ttdef"><b>Definition:</b> <a href="Listas_8h_source.html#l00033">Listas.h:33</a></div></div>
+<div class="ttc" id="classGrafo_html_a2dbee100adf2a4d82556f177d3275bc4"><div class="ttname"><a href="classGrafo.html#a2dbee100adf2a4d82556f177d3275bc4">Grafo::topologia</a></div><div class="ttdeci">void topologia()</div><div class="ttdoc">Topologia Informa as informacoes referentes a topologia do Grafo: Quantidade de Nos, Arestas, Pesos das arestas e janelas de tempo dos Nós. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,7 +1,3 @@
-
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "Listas.h"
 
 #ifndef GRAFO_H_INCLUDED
@@ -11,6 +7,8 @@
 /*!
   Estrutura de um Grafo para o problema de caminho minimo com janelas de tempo.
 */
+class Grafo;
+
 
 class Grafo{
 	
@@ -70,3 +68,4 @@ class Grafo{
 
 
 #endif // GRAFO_H_INCLUDED
+

@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -62,7 +61,7 @@ class Lista_no{
          *  Inicializa a Lista de Nos vazia.
          *  \return Sem Retorno
          */
-		Lista_no(){ this->raiz = NULL;}
+		Lista_no();
 		
         /*! \brief Destrutor
          *  Desaloca a memoria dinamica alocada para a criacao da Lista de Nos.
@@ -74,7 +73,7 @@ class Lista_no{
          *  Informa qual o primeiro No da Lista.
          *  \return Raiz da Lista
          */
-		No_lista_no* get_raiz(){ return this->raiz; }
+		No_lista_no* get_raiz();
 		
         /*! \brief Adicionar No
          *  \param ident - Identificador do No.
@@ -104,7 +103,7 @@ class Lista_aresta{
          *  Inicializa a Lista de Arestas vazia.
          *  \return Sem Retorno
          */
-		Lista_aresta(){ this->raiz = NULL; }
+		Lista_aresta();
 		
         /*! \brief Destrutor
          *  Desaloca a memoria dinamica alocada para a criacao da Lista de Arestas.
@@ -116,7 +115,7 @@ class Lista_aresta{
          *  Informa qual a primeira Aresta da Lista.
          *  \return Raiz da Lista
          */
-		No_lista_aresta* get_raiz(){ return this->raiz; }
+		No_lista_aresta* get_raiz();
 		
         /*! \brief Adicionar Aresta
          *  \param dest - Identificador do No de destino.
@@ -127,4 +126,6 @@ class Lista_aresta{
 		void Add_aresta(int dest, int pes);
 		
 };
+
 #endif // LISTAS_H_INCLUDED
+

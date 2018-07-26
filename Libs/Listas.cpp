@@ -1,29 +1,8 @@
-
 #include "../Include/Listas.h"
 
-//! No da Lista de Nos do Grafo
-/*!
-  Estrutura que armazena as informacoes do No do grafo de forma a serem armazenados em uma lista.
-*/
-struct No_lista_no;
-
-//! No da Lista de Aresta do No
-/*!
-  Estrutura que armazena as informacoes das Arestas que saem de um determidado No de forma a serem armazenados em uma lista.
-*/
-struct No_lista_aresta;
-
-//! Lista de Nos do Grafo
-/*!
-  Lista que contem os Nos pertencentes ao Grafo.
-*/
-class Lista_no;
-
-//! Lista de Arestas do No
-/*!
-  Lista que contem as arestas pertencentes a um determinado No.
-*/
-class Lista_aresta;
+Lista_no::Lista_no(){
+	this->raiz = NULL;	
+}
 
 Lista_no::~Lista_no(){
 	No_lista_no* temp = raiz;
@@ -34,6 +13,10 @@ Lista_no::~Lista_no(){
 	}
 	delete temp->lista_aresta;
 	delete temp;
+}
+
+No_lista_no* Lista_no::get_raiz(){
+	return this->raiz;
 }
 
 No_lista_no* Lista_no::busca_no(int ident){
@@ -71,6 +54,10 @@ void Lista_no::Add_no(int ident, int cheg, int said){
 	this->fim = novo_no;
 }
 
+Lista_aresta::Lista_aresta(){
+	this->raiz = NULL;
+}
+
 Lista_aresta::~Lista_aresta(){
 	No_lista_aresta* temp = raiz;
 	if(temp != NULL){
@@ -80,6 +67,10 @@ Lista_aresta::~Lista_aresta(){
 		}
 		delete temp;
 	}
+}
+
+No_lista_aresta* Lista_aresta::get_raiz(){
+	return this->raiz;
 }
 
 void Lista_aresta::Add_aresta(int dest, int pes){

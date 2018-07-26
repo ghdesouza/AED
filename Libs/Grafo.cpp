@@ -1,14 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>  
-
 #include "../Include/Grafo.h"
-
-//! Grafo
-/*!
-  Estrutura de um Grafo para o problema de caminho minimo com janelas de tempo.
-*/
-class Grafo;
 
 Grafo::Grafo(char nome_arquivo[], char tipo_grafo){
 	
