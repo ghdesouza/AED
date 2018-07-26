@@ -1,4 +1,13 @@
-#### Intruções básicas de uso do programa ####
+# TRABALHO DA DISCIPLINA ALGORITMOS E ESTRUTURA DE DADOS
+# PROFESSOR MARCELO LOBOSCO
+# PROGRAMA DE PÓS GRADUAÇÃO EM MODELAGEM COMPUTACIONAL - UFJF
+# GRUPO:
+# GABRIEL BRANDAO DE MIRANDA 102190180
+# GABRIEL HENRIQUE DE SOUZA 102190173
+
+<----------------------------------------------------------------------------------------->
+
+#### INTRUÇÕES BÁSICAS DE USO DO PROGRAMA ####
 
 ### COMPILAR ###
 	Executar o comando "make" no terminal um executável
