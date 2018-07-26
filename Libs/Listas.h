@@ -28,6 +28,7 @@ class Lista_no{
 
 	private:
 		No_lista_no* raiz;
+		No_lista_no* fim;
 		
 	public:
 		Lista_no(){ this->raiz = NULL;}
@@ -72,28 +73,17 @@ void Lista_no::Add_no(int ident, int cheg, int said){
 	novo_no->chegada[1] = cheg%100;
 	novo_no->saida[0] = (int)said/100;
 	novo_no->saida[1] = said%100;
-	
-	// novo_no->anterior = NULL;
-	// if( this->raiz == NULL ) novo_no->proximo = NULL;
-	// else{
-	// 	this->raiz->anterior = novo_no;
-	// 	novo_no->proximo = this->raiz;
-	// }
-	// this->raiz = novo_no;
 
-
-	if( this->raiz == NULL ) this->raiz = novo_no;
+	if( this->raiz == NULL ){
+		this->raiz = novo_no;
+		this->raiz->anterior = NULL;
+	}
 	else{
-		No_lista_no *no_aux = this->raiz;
-		
-		while(no_aux->proximo != NULL){
-			no_aux = no_aux->proximo;
-		}
-
-		no_aux->proximo = novo_no;
-		novo_no->anterior = no_aux;
+		this->fim->proximo = novo_no;
+		novo_no->anterior = this->fim;
 		novo_no->proximo = NULL;
 	}
+	this->fim = novo_no;
 }
 
 struct No_lista_aresta{
