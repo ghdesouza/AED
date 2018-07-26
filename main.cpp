@@ -19,6 +19,7 @@ int main(int argc, char* argv[]){
 	char *nome_arq = argv[1];
 	Grafo *grafo = new Grafo(nome_arq);
 	grafo->topologia();
+	grafo->menor_caminho();
 	
 	delete grafo;
 	return 0;
