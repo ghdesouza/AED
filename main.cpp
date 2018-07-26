@@ -7,17 +7,18 @@ GABRIEL HENRIQUE DE SOUZA 102190179
 #include <stdlib.h>
 #include <iostream>
 
-#include "Libs/Grafo.h"
+#include "Include/Grafo.h"
 
 int main(int argc, char* argv[]){
-
-	if(argc!=2){
-        printf("Uso:  ./main <arquivo_de_entrada.txt> ");
+	
+	
+	if(argc!=3 || ( *argv[2]!= 'G' && *argv[2]!= 'D' ) ){
+        printf("Uso:	./main <arquivo_de_entrada.txt> <G-Grafo, D-Digrafo>");
         return 1;
     }
 	
 	char *nome_arq = argv[1];
-	Grafo *grafo = new Grafo(nome_arq);
+	Grafo *grafo = new Grafo(nome_arq, *argv[2]);
 	grafo->topologia();
 	grafo->menor_caminho();
 	
