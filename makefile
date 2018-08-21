@@ -10,7 +10,7 @@ DIR_INC = Include
 main: main.o Grafo.o Listas.o
 	
 	$(CC) $(DIR_OBJ)/$(TARGET).o $(DIR_OBJ)/Grafo.o $(DIR_OBJ)/Listas.o $(LIBS) -o $@ $(CFLAGS)
-	@echo "Executavel ./main gerado."
+	@echo "Execucao ./main <arquivo_de_entrada.txt> <G-Grafo, D-Digrafo>"
 
 main.o: $(TARGET).cpp
 	mkdir -p $(DIR_OBJ)

@@ -17,6 +17,7 @@ int main(int argc, char* argv[]){
 	Grafo *grafo = new Grafo(nome_arq, *argv[2]);
 	grafo->topologia();
 	grafo->menor_caminho();
+	system("python plotCaminho.py");
 	
 	delete grafo;
 	return 0;

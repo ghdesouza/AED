@@ -51,6 +51,8 @@ Grafo::~Grafo(){
 
 void Grafo::topologia(){
 	
+	FILE *arq = fopen("Grafo.csv", "w");
+
 	printf("\nQuantidade de Nos: %d\n", this->quant_nos);
 	printf("Quantidade de Aresta: %d\n", this->quant_arestas);
 	printf("No Inicial: %d\n", this->id_inicio);
@@ -71,30 +73,43 @@ void Grafo::topologia(){
 		temp2 = temp->lista_aresta->get_raiz();
 		while(temp2 != NULL){
 			printf("\t( %02d, %02d )\t%02d:%02d\n", temp->identificador, temp2->destino, (int)temp2->peso/60, (int)temp2->peso%60);
+			fprintf(arq, "%02d, %02d, 01", temp->identificador, temp2->destino);
+			if(temp2->proximo != NULL || temp->proximo != NULL) fprintf(arq, "\n"); 
 			temp2 = temp2->proximo;
 		}
 		temp = temp->proximo;
 	}
 	printf("\n");
+
+	fclose(arq);
+
 	return;
 }
 
 void Grafo::menor_caminho(){
 	
+	FILE *arq2 = fopen("Caminho.csv", "w");
+
 	No_lista_no *no_temp;
-	
+	int dist_temp;	
+
 	no_temp = this->lista_no->busca_no(this->id_inicio);
 	no_temp->distancia = 0;
-	soma_com_janela(no_temp, no_temp, 0);
+	dist_temp = soma_com_janela(no_temp, no_temp, 0);
+	no_temp->distancia = dist_temp;
 	this->broadcast_distancia(no_temp);
 	
 	no_temp = this->lista_no->busca_no(this->id_final);
 	printf("Tempo total: %02d:%02d\tCaminho: ", (int)no_temp->distancia/60, no_temp->distancia%60);
 	while(no_temp->identificador != id_inicio){
 		printf("%02d <- ", no_temp->identificador);
+		fprintf(arq2, "%02d\n", no_temp->identificador);
 		no_temp = this->lista_no->busca_no(no_temp->predecessor);
 	}	
 	printf("%02d\n\n", no_temp->identificador);
+	fprintf(arq2, "%02d", no_temp->identificador);
+
+	fclose(arq2);
 }
 
 void Grafo::broadcast_distancia(No_lista_no *no){
@@ -106,6 +121,7 @@ void Grafo::broadcast_distancia(No_lista_no *no){
 	while(aresta_temp != NULL){
 		no_temp = this->lista_no->busca_no(aresta_temp->destino);
 		dist_temp = this->soma_com_janela(no, no_temp, aresta_temp->peso);
+//		printf("%d \t%d \t%d \t%d \n", no->identificador, no_temp->identificador, dist_temp, no_temp->distancia);
 		if(no_temp->distancia > dist_temp){
 			no_temp->distancia = dist_temp;
 			no_temp->predecessor = no->identificador;
@@ -123,7 +139,7 @@ int Grafo::soma_com_janela(No_lista_no *inicial, No_lista_no *fim, int peso){
 		if(hora_viagem < fim->chegada) tempo_parado = fim->chegada-hora_viagem;
 		else if(hora_viagem > fim->saida) tempo_parado = 1440-(hora_viagem-fim->chegada);
 	}
-	
+//	printf("%d \t%d \t %d \t %d \n", inicial->identificador, tempo_viagem, tempo_parado, hora_viagem);
 	return (tempo_viagem+tempo_parado);
 }
 
